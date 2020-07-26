@@ -17,7 +17,7 @@ class Sign_in extends Component{
 
     }
 
-    onHandleChange = event => {
+    onHandleChange = (event) => {
         const {value,name} = event.target;
         this.setState({[name]:value})
     }
