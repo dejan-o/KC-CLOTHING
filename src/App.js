@@ -11,6 +11,8 @@ import Sign_in_and_sign_up from './pages/sing_in_and_sign_up/Sign_in_and_sign_up
 import {auth,createUserProfileDocument} from './firebase/firebase';
 import {createStructuredSelector} from 'reselect';
 import {selectCurrentUser} from './redux/user/userSelectors'
+import Footer from './components/footer/Footer';
+import Contact from './pages/contact/Contact';
 
 
 
@@ -55,8 +57,10 @@ render(){
             <Route exact path='/' component={Homepage}/>
             <Route path='/shop' component={ShopPage} />
             <Route path='/checkout' component={Checkout} />
+            <Route path='/contact' component={Contact} />
             <Route exact path='/signin' render={() => this.props.currentUser ? (<Redirect to="/" />) : (<Sign_in_and_sign_up />)} />
         </Switch>
+        <Footer />
     </div>
   );
 }
