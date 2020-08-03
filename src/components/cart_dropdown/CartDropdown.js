@@ -9,6 +9,7 @@ import { withRouter } from 'react-router-dom';
 import { toggleCartHidden } from '../../redux/cart/cartActions';
 
 const CartDropdown = ({ cartItems, history, dispatch })=> {
+	const disableButton = !cartItems.length;
 	return (
 		<div className="cart-dropdown">
 			<div className="cart-items">
@@ -21,7 +22,7 @@ const CartDropdown = ({ cartItems, history, dispatch })=> {
 				}
 
 			</div>
-			<CustomButton onClick={()=> {
+			<CustomButton disabled={disableButton} onClick={()=> {
 				history.push('/checkout');
 				dispatch(toggleCartHidden());}}>GO TO CHECKOUT </CustomButton>
 		</div>
