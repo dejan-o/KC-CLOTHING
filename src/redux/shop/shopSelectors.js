@@ -32,4 +32,4 @@ export const selectCollectionLoaded = createSelector(
 export const selectCollectionIsFetching = createSelector(
 	[selectShop],
 	shop => shop.isFetching
-)
+);

@@ -18,7 +18,7 @@ class ShopPage extends Component {
 
 
 	render(){
-	const {match,isFetching, isLoaded} = this.props;
+	const {match} = this.props;
 
 	return (
 		<div  className="shop-page">
