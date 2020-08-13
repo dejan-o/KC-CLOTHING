@@ -2,20 +2,20 @@ import shopTypes from './shopTypes';
 import { firestore, convertCollectionsSnapshotToMap } from '../../firebase/firebase';
 
 
-const fetchCollectionsSuccess = payload => {
+export const fetchCollectionsSuccess = payload => {
 	return {
 		type: shopTypes.FETCH_COLLECTIONS_SUCCESS,
 		payload
 	};
 };
 
-const fetchCollectionsStart = () => {
+export const fetchCollectionsStart = () => {
 	return {
 		type: shopTypes.FETCH_COLLECTIONS_START
 	};
 };
 
-const fetchCollectionsFailure = () => {
+export const fetchCollectionsFailure = () => {
 	return {
 		type: shopTypes.FETCH_COLLECTIONS_FAILURE
 	};
