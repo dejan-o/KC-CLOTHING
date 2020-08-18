@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Homepage from './pages/homepage/Homepage';
 import ShopPage from './pages/shop/ShopPage';
@@ -16,24 +16,17 @@ import Contact from './pages/contact/Contact';
 
 
 
-class App extends Component {
+const App = ({ checkUserSession, currentUser }) => {
 
   
-
-  unsubscribeFromAuth = null;
-
-  componentDidMount(){
-    const {checkUserSession} = this.props;
-  checkUserSession();
-}
-
-  componentWillUnmount(){
-    this.unsubscribeFromAuth();
-  }
+useEffect(() => {
+  checkUserSession()
+}, [checkUserSession]);
 
 
 
-render(){
+
+
   return (
     <div>
 
@@ -43,13 +36,13 @@ render(){
             <Route path='/shop' component={ShopPage} />
             <Route path='/checkout' component={Checkout} />
             <Route path='/contact' component={Contact} />
-            <Route exact path='/signin' render={() => this.props.currentUser ? (<Redirect to="/" />) : (<Sign_in_and_sign_up />)} />
+            <Route exact path='/signin' render={() => currentUser ? (<Redirect to="/" />) : (<Sign_in_and_sign_up />)} />
         </Switch>
         <Footer />
     </div>
   );
 }
-}
+
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser

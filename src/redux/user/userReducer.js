@@ -10,7 +10,7 @@ const userReducer = (state=INITIAL_STATE, action) => {
 	case userActionTypes.SIGN_IN_SUCCESS:
 		return { ...state, currentUser: action.payload };
 	case userActionTypes.SIGN_OUT_SUCCESS:
-		return {...state, currentUser: null, error: null}
+		return { ...state, currentUser: null, error: null };
 	case userActionTypes.SIGN_OUT_FAILURE:
 	case userActionTypes.SIGN_IN_FAILURE:
 	case userActionTypes.SIGN_UP_FAILURE:
