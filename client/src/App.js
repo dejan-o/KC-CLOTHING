@@ -8,6 +8,7 @@ import {createStructuredSelector} from 'reselect';
 import {selectCurrentUser} from './redux/user/userSelectors'
 import Footer from './components/footer/Footer';
 import Spinner from './components/spinner/Spinner';
+import ErrorBoundary from './components/error_boundary/ErrorBoundary';
 
 const Homepage = lazy(() => import('./pages/homepage/Homepage'));
 const ShopPage = lazy(() => import('./pages/shop/ShopPage'));
@@ -31,13 +32,15 @@ useEffect(() => {
 
         <Header />
         <Switch>
-          <Suspense fallback={<Spinner/>}>
-            <Route exact path='/' component={Homepage}/>
-            <Route path='/shop' component={ShopPage} />
-            <Route path='/checkout' component={Checkout} />
-            <Route path='/contact' component={Contact} />
-            <Route exact path='/signin' render={() => currentUser ? (<Redirect to="/" />) : (<Sign_in_and_sign_up />)} />
-          </Suspense>
+          <ErrorBoundary>
+            <Suspense fallback={<Spinner/>}>
+              <Route exact path='/' component={Homepage}/>
+              <Route path='/shop' component={ShopPage} />
+              <Route path='/checkout' component={Checkout} />
+              <Route path='/contact' component={Contact} />
+              <Route exact path='/signin' render={() => currentUser ? (<Redirect to="/" />) : (<Sign_in_and_sign_up />)} />
+            </Suspense>
+          </ErrorBoundary>
         </Switch>
         <Footer />
     </div>
