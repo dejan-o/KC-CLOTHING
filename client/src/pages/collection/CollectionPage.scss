@@ -18,3 +18,10 @@
     }
   }
   
+@media screen and (max-width:1024px){
+  .collection-page{
+    .items{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
