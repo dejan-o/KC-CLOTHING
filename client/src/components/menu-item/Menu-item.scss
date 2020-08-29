@@ -69,3 +69,41 @@
       }
     }
   }
+
+  @media screen and (max-width:1024px){
+    .menu-item{
+    height: 300px;
+    min-width: 40%;
+
+    &.large{
+      height: 300px;
+    }
+
+    &:last-child{
+      height: 400px;
+    }
+
+    .content{
+      height:70px;
+    }
+    }
+  }
+
+  @media screen and (max-width:600px){
+    .menu-item{
+    height: 200px;
+    min-width: 40%;
+
+    &.large{
+      height: 200px;
+    }
+
+    &:last-child{
+      height: 300px;
+    }
+
+    .content{
+      height:70px;
+    }
+    }
+  }

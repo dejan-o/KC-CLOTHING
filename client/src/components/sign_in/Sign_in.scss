@@ -16,5 +16,17 @@
 }
 
 
+@media screen and (max-width: 800px){
+    .sign-in{
+       text-align: center;
+       margin-bottom: 100px;
+       width: 80%;
 
+       .buttons{
+           justify-content: space-evenly;
+
+        
+       }
+    }
+  }
 

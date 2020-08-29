@@ -14,3 +14,15 @@
     }
   }
   
+ 
+  @media screen and (max-width: 1024px){
+   .collection-preview{
+   
+    .preview{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     justify-items: center;
+     grid-gap: 15px;
+   }
+  }
+  }

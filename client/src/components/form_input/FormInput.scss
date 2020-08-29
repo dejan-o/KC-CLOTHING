@@ -52,3 +52,17 @@ $main-color: black;
     }
   }
 }
+
+@media screen and (max-width: 800px){
+  .group{
+    .form-input-label{
+      text-align: center;
+      transform: translateX(-50%);
+      left:unset;
+  }
+    .form-input{
+      text-align: center;
+    }
+
+}
+}
