@@ -21,6 +21,10 @@
     .price {
       width: 23%;
     }
+
+    .price{
+      padding-left: 20px;
+    }
   
     .quantity {
       padding-left: 20px;
@@ -41,3 +45,20 @@
     }
   }
   
+  @media screen and (max-width:600px){
+    .checkout-item{
+      .image-container{
+        width: 21%;
+      }
+      .name,
+      .quantity,
+      .price {
+        width: 21%;
+      }
+      
+    
+    .remove-button {
+      padding-left: 20px;
+    }
+  }
+  }

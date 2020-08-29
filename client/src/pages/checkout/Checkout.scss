@@ -16,6 +16,10 @@
       .header-block {
         text-transform: capitalize;
         width: 23%;
+
+        &.padd{
+          padding-left: 20px;
+        }
   
         &:last-child {
           width: 8%;
@@ -40,6 +44,25 @@
       margin-left: auto;
       margin-top: 50px;
       margin-bottom: 20px;
+    }
+
+  }
+
+  @media screen and (max-width:600px){
+    .checkout-page{
+      width: 100%;
+
+
+      .checkout-header {
+       
+        .header-block {
+          width: 21%;
+    
+          &:last-child {
+            width: 16%;
+          }
+        }
+      }
     }
 
   }
