@@ -1,0 +1,25 @@
+.contact-item{
+
+
+.contact-item-header{
+    font-size: 30px;
+    border-bottom: 1px solid grey;
+
+
+}
+
+.contact-item-content{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    .contact-content-group{
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-start;
+
+        .contact-item-icon{
+             margin-right: 10px;
+    }
+}
+}
+}

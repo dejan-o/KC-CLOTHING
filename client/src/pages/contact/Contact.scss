@@ -1,11 +1,28 @@
 .contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    width: 100%;
+    display: grid;
+    width: 70%;
+    margin:30px auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 100px;
 
-    .title{
-        font-size: 70px;
+
+    
+
+
+  
+}
+
+
+@media screen and (max-width: 800px){
+    .contact{
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 70px;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .contact{
+    grid-template-columns: 1fr;
     }
 }

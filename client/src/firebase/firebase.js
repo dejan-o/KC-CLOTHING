@@ -48,6 +48,26 @@ export const convertCollectionsSnapshotToMap = (collections) => {
 };
 
 
+export const convertContactsSnapshotToArray = (collections) => {
+
+	const transformedContacts = collections.docs.map(doc => {
+		const { place, hours, address, phone, email } = doc.data();
+		return {
+			id: doc.id,
+			place,
+			hours,
+			address,
+			phone,
+			email
+		};
+	});
+	return transformedContacts.reduce( (accumulator, current) => {
+		 accumulator.push(current);
+		 return accumulator;
+	}, [] );
+};
+
+
 
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
